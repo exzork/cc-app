@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  royal:
+    container_name: royal
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - VIRTUAL_HOST=cc-app.exzork.me
+      - LETSENCRYPT_HOST=cc-app.exzork.me
+      - LETSENCRYPT_EMAIL=muhammadeko.if@gmail.com
+networks:
+  default :
+    name: nginx-proxy
