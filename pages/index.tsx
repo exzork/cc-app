@@ -53,8 +53,9 @@ export default function CCApp() {
                 ...d,
                 neyman
             }
-        })
+        }).sort((a, b) => b.neyman - a.neyman)
     }
+
     const [age, setAge] = useState(-1)
     const [gender, setGender] = useState(false)
     const [salary, setSalary] = useState(-1)
@@ -217,8 +218,8 @@ export default function CCApp() {
                             <option value={-1}>Age</option>
                             <option value={0}>0-20</option>
                             <option value={1}>21-40</option>
-                            <option value={3}>41-60</option>
-                            <option value={4}>61+</option>
+                            <option value={2}>41-60</option>
+                            <option value={3}>61+</option>
                         </select>
                         <div>
                             <button
